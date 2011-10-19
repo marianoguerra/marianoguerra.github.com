@@ -15,3 +15,6 @@ as the post says, you should add some lines to .gitignore
 
         src/main/webapp/WEB-INF/lib/*
         src/main/webapp/WEB-INF/classes/*
+
+.. note::
+        this modified the build process, so I had to revert it
