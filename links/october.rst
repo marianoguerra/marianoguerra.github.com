@@ -1,3 +1,4 @@
+http://www.infoq.com/presentations/LMAX
 http://www.damninteresting.com/rider-on-the-storm/
 http://blog.ccpgames.com/kristjan/2011/05/03/evaluating-nagare/
 http://www.infoq.com/presentations/event-patterns-ian-cartwright
