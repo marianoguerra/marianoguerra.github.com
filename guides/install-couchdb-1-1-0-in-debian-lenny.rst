@@ -58,3 +58,6 @@ you should see something like this::
 
         {"couchdb":"Welcome","version":"1.1.0"}
 
+if you want it to start every time you start your computer::
+
+        sudo update-rc.d couchdb defaults 
