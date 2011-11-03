@@ -34,6 +34,11 @@
 * make a pull request https://github.com/lift/framework/pull/10
 * wait for the veredict
 
+some information I used:
+
+* http://www.assembla.com/spaces/liftweb/wiki/Building_Lift
+* https://github.com/lift/framework/blob/master/README.md
+
 related tests before the patch::
 
 	[error] x A couch record should
