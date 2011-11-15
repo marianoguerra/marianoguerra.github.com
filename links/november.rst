@@ -1,3 +1,4 @@
+http://www.infoq.com/presentations/We-Really-Dont-Know-How-To-Compute
 http://pragprog.com/magazines/2011-03/punk-rock-languages
 http://www.informit.com/articles/article.aspx?p=1193856&_
 file:///media/VERBATIM%20HD/backups/mariano-08-11-11/dev/me 
