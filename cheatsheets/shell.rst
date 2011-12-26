@@ -19,3 +19,19 @@ operations
 * if [ $var -eq something ]; then command; elif [ $var -ne something ]; command; else command; fi
 * for $var in something; do command; done
 
+shortcuts
+=========
+
+control-A move to start of current paragraph
+control-B move left one character
+control-D forwards delete
+control-E move to end of current paragraph
+control-F move right one character
+control-H delete
+control-K delete remainder of current paragraph
+control-N move down one line
+control-O insert new line after cursor
+control-P move up one line
+control-T transpose (swap) two surrounding character
+control-V move to end, then left one character
+control-Y paste text previously deleted with control-K

@@ -89,6 +89,8 @@ dev
  * erlang-nox
  * python3
  * check
+ * libzmq-dev libzmq1
+ * libncurses5 libncurses5-dev libncursesw5 libncursesw5-dev ncurses-doc ncurses-examples 
 
 js
 --

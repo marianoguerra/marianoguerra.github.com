@@ -1,0 +1,12 @@
+http://blog.nestoria.co.uk/why-and-how-weve-switched-away-from-google-ma
+http://www.virgin.com/richard-branson/blog/time-to-end-the-war-on-drugs
+http://www.stereoplex.com/blog/mobile-api-design-thinking-beyond-rest
+http://www.lispcast.com/the-heart-of-unix
+http://www.forbes.com/sites/venkateshrao/2011/12/05/the-rise-of-developeronomics/
+http://www.pagina12.com.ar/diario/suplementos/espectaculos/12-23862-2011-12-18.html
+http://www.theatlantic.com/international/archive/2011/02/the-myth-of-japans-lost-decades/71741/
+http://www.ft.com/intl/cms/s/2/b4b5a2aa-26cb-11e1-9ed3-00144feabdc0.html#axzz1gnVqi4Sr
+http://youarenotsosmart.com/2011/12/14/the-overjustification-effect/
+http://www.infoq.com/interviews/sheehy-riak
+http://www.infoq.com/interviews/sheehy-katz-riak-couchdb
+http://www.infoq.com/presentations/Case-Study-Riak-on-Drugs
