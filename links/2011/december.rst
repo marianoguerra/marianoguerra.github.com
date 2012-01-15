@@ -1,3 +1,4 @@
+http://www.ics.uci.edu/~franz/Site/pubs-pdf/BC03.pdf
 http://blog.nestoria.co.uk/why-and-how-weve-switched-away-from-google-ma
 http://www.virgin.com/richard-branson/blog/time-to-end-the-war-on-drugs
 http://www.stereoplex.com/blog/mobile-api-design-thinking-beyond-rest
