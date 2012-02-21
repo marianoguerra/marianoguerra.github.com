@@ -1,0 +1,15 @@
+http://www.infoq.com/presentations/Actor-Interaction-Patterns
+http://www.informationdiet.com/blog/read/the-information-diet-stump-speech
+http://blip.tv/clojure/stuart-halloway-simplicity-ain-t-easy-4842694
+https://www.alumniportal-deutschland.org/kultur/musik/artikel/kraftwerk-band-kraftwerk-elektronische-musik-musik-techno-1.html?et_cid=6&et_lid=5&et_sub=nlkw5_kraftwerk
+http://www.infoq.com/presentations/Cool-Code
+http://evincarofautumn.blogspot.com/2012/02/why-concatenative-programming-matters.html
+http://blip.tv/clojure/neal-ford-neal-s-master-plan-for-clojure-enterprise-mindshare-domination-5953926
+http://blog.ngas.ch/archives/2011/12/13/the_destructive_desktop__mdash_linux_in_trouble/index.html
+http://www.audioanarchy.org/antiwork.html
+http://nymag.com/news/features/wall-street-2012-2/
+http://nathanmarz.com/blog/suffering-oriented-programming.html
+http://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/
+http://www.scientificamerican.com/article.cfm?id=the-power-of-introverts
+http://blog.patchspace.co.uk/why-you-shouldnt-hire-more-developers
+http://www.lispcast.com/modern-language-wishlist
