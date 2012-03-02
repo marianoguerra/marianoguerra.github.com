@@ -1,3 +1,7 @@
+http://vimeo.com/9260794
+http://vimeo.com/36579366
+http://seertaak.posterous.com/bullet-adventures-in-a-minimally-delimited-li
+http://www.infoq.com/presentations/Scalaz-Functional-Programming-in-Scala
 http://www.infoq.com/presentations/Actor-Interaction-Patterns
 http://www.informationdiet.com/blog/read/the-information-diet-stump-speech
 http://blip.tv/clojure/stuart-halloway-simplicity-ain-t-easy-4842694
