@@ -1,0 +1,66 @@
+Scala, sbt, scalatest and scct for code coverage testing
+========================================================
+
+simple guide on how to setup a scala project using sbt and sbt-scct plugin
+to have code coverage on tests using scalatests.
+
+.. note::
+
+        this guide won't be kept updated, if you want to update since versions
+        move really fast, you will get the idea on how to do it and will have
+        to play version bingo.
+        
+        if you want to help keeping it updated provide pull requests
+
+ingredients
+-----------
+
+* scala 2.9.1
+* sbt 0.11.2
+* sbt-scct 0.2
+* scalatest 1.6.1
+
+how to
+------
+
+create a build.sbt if you don't have one already, you need to add the following
+parameters (you can use build.sbt as a starting point)
+
+scala version::
+
+        scalaVersion := "2.9.1"   
+
+load scct settings::
+
+        seq(ScctPlugin.scctSettings: _*)
+
+add scalatest tou your dependencies::
+
+        libraryDependencies ++= Seq(                                                   
+            "org.scalatest" % "scalatest_2.9.0" % "1.6.1" % "test"
+        )   
+
+create a file called project/plugins.sbt if you don't have one already and
+add the following::
+
+        resolvers += Classpaths.typesafeResolver
+
+        addSbtPlugin("ch.craven" % "scct-plugin" % "0.2")
+
+        resolvers ++= Seq(
+                "scct-repo" at "http://dimbleby.github.com/maven",
+                Resolver.url("Typesafe repository", new java.net.URL("http://typesafe.artifactoryonline.com/typesafe/ivy-releases/"))(Resolver.defaultIvyPatterns)
+
+then create some tests like the one under src/test/scala/ar/com/marianoguerra/CalcSpec.scal
+
+then start sbt and run::
+
+        coverage:doc
+
+after the test ran open the report with your browser::
+
+        firefox target/scala-2.9.1/coverage-report/index.html
+
+and you are done!
+
+note that I left one if branch without testing so you can see how it looks.
