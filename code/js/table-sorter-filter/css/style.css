@@ -1,0 +1,17 @@
+body{
+ margin: 5% 5%;
+ width: 90%;
+}
+
+.table-filter{
+ width: 30%;
+ display: table;
+}
+
+.table-filter label{
+ float: left;
+}
+
+.table-filter input, .table-filter select{
+ float: right;
+}

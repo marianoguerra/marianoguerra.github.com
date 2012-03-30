@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="tablesorter/themes/blue/style.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery.tablesorter.js"></script> 
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+
+   <div class="table-filter">
+    <label for="filter">Filter</label>
+    <input id="filter" value="" type="search">
+   </div>
+
+   <div class="table-filter">
+    <label for="zona">Zona</label>
+    <select id="zona">
+    </select>
+   </div>
+
+   <table id="bares" class="table-bordered tablesorter">
+    <thead>
+     <tr>
+         <th>Bar</th>
+         <th>Dirección</th>
+         <th>Zona</th>
+         <th>WiFi</th>
+         <th>Enchufes</th>
+         <th>Comodidad</th>
+         <th>Geek friendly</th>
+         <th>Cervezas</th>
+         <th>Comidas</th>
+         <th>Seguridad</th>
+         <th>Iluminación</th>
+         <th>Ruido</th>
+         <th>Ambiente</th>
+     </tr>
+    </thead>
+
+    <tbody>
+     <tr>
+      <td>Bar 6 </td>
+      <td>Armenia 676 </td>
+      <td>Palermo</td>
+      <td>
+       <span class="category label">5</span>
+       <span class="desc">
+       sin clave, funca bien y muy rápido, puertos abiertos
+       </span>
+      </td>
+      <td>
+       <span class="category label">4</span>
+       <span class="desc">contra una pared, accesible, no muchos</span>
+      </td>
+      <td>
+       <span class="category label">4</span>
+       <span class="desc">mesas bajas, sillones, piola, poca gente, el lugar es amplio</span>
+      </td>
+      <td>
+       <span class="category label">5</span>
+       <span class="desc">muy buena onda</span>
+      </td>
+      <td>
+       <span class="category label">3</span>
+       <span class="desc">variedad, pero porrones, a precio de Palermo (caro, bah)</span>
+      </td>
+      <td>
+       <span class="category label">2</span>
+       <span class="desc">poco grupal, muy restaurant, malo para sprinters</span>
+      </td>
+      <td>
+       <span class="category label">4</span>
+       <span class="desc">poca circulación</span>
+      </td>
+      <td>
+       <span class="category label">4</span>
+       <span class="desc">tiene un patio, un lindo ventanal a la calle, y parte del techo con , (luz natural o artificial</span>
+      </td>
+      <td>
+       <span class="category label">4</span>
+       <span class="desc">música, tranqui, bien, hasta que se hizo tipo 23 y la subieron</span>
+      </td>
+      <td>
+       <span class="category label">5</span>
+       <span class="desc">moderno, copado, baños razonablemente limpios</span>
+      </td>
+     </tr>
+
+     <tr>
+      <td>Punta Cuore </td>
+      <td>Corrientes 4199 </td>
+      <td>Almagro</td>
+      <td>
+       <span class="category label">5</span>
+       <span class="desc">sin clave, funca bien y muy rápido, puertos abiertos</span>
+      </td>
+      <td>
+       <span class="category label">2</span>
+       <span class="desc">tenía, pero sólo dos en todo el local</span>
+      </td>
+      <td>
+       <span class="category label">3</span>
+       <span class="desc">mesas comunes, sillas de bar, poca gente pero demasiadas mesas</span>
+      </td>
+      <td>
+       <span class="category label">4</span>
+       <span class="desc">me gustó que a mitad de la noche nos cambiamos de mesa y no nos dijeron nada</span>
+      </td>
+      <td>
+       <span class="category label">2</span>
+       <span class="desc">sólo quilmes o quilmoides</span>
+      </td>
+      <td>
+       <span class="category label">?</span>
+       <span class="desc">-</span>
+      </td>
+      <td>
+       <span class="category label">4</span>
+       <span class="desc">poca circulación</span>
+      </td>
+      <td>
+       <span class="category label">3</span>
+       <span class="desc">bar clásico, mucha luz interior</span>
+      </td>
+      <td>
+       <span class="category label">4</span>
+       <span class="desc">nada de música, sólo gente hablando</span>
+      </td>
+      <td>
+       <span class="category label">3</span>
+       <span class="desc">típico bar viejo pero no caido a menos, baños razonablemente limpios</span>
+      </td>
+     </tr>
+    <tbody>
+   </table>
+
+  </body>
