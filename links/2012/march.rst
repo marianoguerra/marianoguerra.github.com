@@ -1,1 +1,15 @@
+http://fora.tv/2011/02/15/Robert_Sapolsky_Are_Humans_Just_Another_Primate
+http://www.youtube.com/watch?v=FvmTSpJU-Xc
+http://www.cam.ac.uk/research/news/a-policy-of-mass-destruction/
+http://thewebivore.com/go-the-fuck-home-my-ignite-talk
+http://penny-arcade.com/patv/episode/game-addiction-pt.2
+http://www.infoq.com/presentations/Titanic-COBOL-and-the-100-Year-Platform
+http://video.google.com/videoplay?docid=-8860158196198824415
+http://www.madinamerica.com/2012/02/why-anti-authoritarians-are-diagnosed-as-mentally-ill/
+http://www.bitc-lang.org/docs/papers/PLOS2006-shap.html
+http://www.economist.com/node/21549956
+http://www.codinghorror.com/blog/2011/04/working-with-the-chaos-monkey.html
+http://paulgraham.com/ambitious.html
+http://www.dreamsongs.com/WIB.html
+http://tagide.com/blog/2012/03/research-in-programming-languages/
 http://www.theatlantic.com/international/archive/2012/02/africas-amazing-rise-and-what-it-can-teach-the-world/253587/
