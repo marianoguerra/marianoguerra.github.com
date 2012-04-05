@@ -1,3 +1,4 @@
+http://www.antipope.org/charlie/blog-static/2012/03/not-an-april-fool-1.html
 http://fora.tv/2011/02/15/Robert_Sapolsky_Are_Humans_Just_Another_Primate
 http://www.youtube.com/watch?v=FvmTSpJU-Xc
 http://www.cam.ac.uk/research/news/a-policy-of-mass-destruction/
