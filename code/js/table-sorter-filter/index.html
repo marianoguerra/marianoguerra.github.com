@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Twitter Bootstrap</title>
+    <title>Bares</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -23,15 +23,25 @@
   </head>
   <body>
 
-   <div class="table-filter">
+   <!--<div class="table-filter">
     <label for="filter">Filter</label>
     <input id="filter" value="" type="search">
-   </div>
+   </div>-->
 
    <div class="table-filter">
     <label for="zona">Zona</label>
     <select id="zona">
     </select>
+   </div>
+
+   <div class="table-filter">
+    <label for="humano">Humano</label>
+    <input type="checkbox" id="humano">
+   </div>
+
+   <div class="table-filter">
+    <label for="geek">Geek</label>
+    <input type="checkbox" id="geek">
    </div>
 
    <table id="bares" class="table-bordered tablesorter">
@@ -50,6 +60,9 @@
          <th>Iluminación</th>
          <th>Ruido</th>
          <th>Ambiente</th>
+         <th class="score">Score Geek</th>
+         <th class="score">Score Humano</th>
+         <th class="score">Total</th>
      </tr>
     </thead>
 
@@ -100,6 +113,15 @@
        <span class="category label">5</span>
        <span class="desc">moderno, copado, baños razonablemente limpios</span>
       </td>
+      <td class="score">
+       8.08
+      </td>
+      <td class="score">
+       4.25
+      </td>
+      <td class="score">
+       3.83
+      </td>
      </tr>
 
      <tr>
@@ -145,6 +167,15 @@
       <td>
        <span class="category label">3</span>
        <span class="desc">típico bar viejo pero no caido a menos, baños razonablemente limpios</span>
+      </td>
+      <td class="score">
+       6.58
+      </td>
+      <td class="score">
+       3.25
+      </td>
+      <td class="score">
+       3.33
       </td>
      </tr>
     <tbody>

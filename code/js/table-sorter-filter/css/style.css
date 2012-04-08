@@ -15,3 +15,7 @@ body{
 .table-filter input, .table-filter select{
  float: right;
 }
+
+.score{
+ text-align: center;
+}

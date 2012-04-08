@@ -1,5 +1,9 @@
 $(function () {
     "use strict";
+    var geekCols = [false, false, false, true, true, false, true, true, false, false, false, false, false, true, false, false],
+        humanCols = [false, false, false, false, false, true, false, false, true, true, true, true, true, false, true, false],
+        geekColName = "geek-col",
+        humanColName = "human-col";
 
     // add case insensitive contains (note the final i)
     $.extend($.expr[':'], {
@@ -78,8 +82,39 @@ $(function () {
             filterByZone($(this).children(":selected").html());
         });
 
+        function setGeekHumanClasses() {
+            $table.find("tr").each(function (i, row) {
+                $(row).children().each(function (index, node) {
+                    node = $(node);
+
+                    if (geekCols[index]) {
+                        node.addClass(geekColName);
+                    }
+
+                    if (humanCols[index]) {
+                        node.addClass(humanColName);
+                    }
+                });
+            });
+        }
+
+        function toggleCols(cls) {
+            return function () {
+                if ($(this).attr("checked")) {
+                    $("." + cls).show();
+                } else {
+                    $("." + cls).hide();
+                }
+            };
+        }
+
+        $("#humano").click(toggleCols(humanColName));
+        $("#geek").click(toggleCols(geekColName));
 
         inputToSearch($filter, filterTable, filterTable, filterTable);
         fillSelectZona();
+        setGeekHumanClasses();
+        $("." + humanColName).hide();
+        $("." + geekColName).hide();
     }());
 });
