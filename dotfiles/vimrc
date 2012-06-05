@@ -1,17 +1,44 @@
 " show the status line as the second last line
 set laststatus=2
-set statusline=%F%m%r%h%w\ %{&ff}\ %Y\ %04l,%04v\ %p%%\ %L 
+set statusline=%F%m%r%h%w\ %{&ff}\ %Y\ %04l,%04v\ %p%%\ %L\ %{fugitive#statusline()}
 set colorcolumn=79
+
+set undodir=~/.vim/tmp/undo//     " undo files
+set backupdir=~/.vim/tmp/backup// " backups
+set directory=~/.vim/tmp/swap//   " swap files
+set backup                        " enable backups
+
+" Don't move on *
+nnoremap * *<c-o>
+
+" It's 2011.
+noremap j gj
+noremap k gk
+
+" Easy buffer navigation
+noremap <C-h>  <C-w>h
+noremap <C-j>  <C-w>j
+noremap <C-k>  <C-w>k
+noremap <C-l>  <C-w>l
+
+" Substitute
+nnoremap <leader>s :%s//<left>
+
+" Sudo to write
+cmap w!! w !sudo tee % >/dev/null
+
+" Toggle paste
+set pastetoggle=<F8>
 
 au BufRead,BufNewFile *.py,*pyw,*js,*.json,*.php,*.erl,*.fn,*.ifn,*.yrl,*.xrl set shiftwidth=4
 au BufRead,BufNewFile *.rl,*.c,*.h set shiftwidth=4
-au BufRead,BufNewFile *.scala, set shiftwidth=2
+au BufRead,BufNewFile *.scala,*.k set shiftwidth=2
 set backspace=indent,eol,start
 set nonumber
 
 au BufRead,BufNewFile *py,*pyw,*.php,*.c,*.h,*js,*.json,*.erl,*.fn,*.ifn,*.yrl,*.xrl set tabstop=4
 au BufRead,BufNewFile *html,*xul,*htm,*xml,*xhtml,*css set tabstop=1 sw=1 expandtab 
-au BufRead,BufNewFile *.scala set tabstop=2 sw=2 expandtab 
+au BufRead,BufNewFile *.scala,*.k set tabstop=2 sw=2 expandtab 
 
 au BufRead,BufNewFile *.fn source ~/.vim/syntax/efene.vim
 au BufRead,BufNewFile *.ifn source ~/.vim/syntax/efene.vim
@@ -19,6 +46,8 @@ au BufRead,BufNewFile *.fn set filetype=efene
 au BufRead,BufNewFile *.ifn set filetype=efene
 au BufRead,BufNewFile *.xul set filetype=xml
 au BufRead,BufNewFile *.rl set filetype=c
+au BufRead,BufNewFile *.k set filetype=scheme
+au BufRead,BufNewFile *.rest set filetype=rst
 au BufRead,BufNewFile *.yrl source /usr/share/vim/vim73/syntax/erlang.vim
 au BufRead,BufNewFile *.xrl source /usr/share/vim/vim73/syntax/erlang.vim
 au BufRead,BufNewFile *.json source /usr/share/vim/vim73/syntax/javascript.vim
@@ -126,20 +155,15 @@ set showmatch
 "Highlight search things
 set hlsearch
 
-"Turn backup off
-set nobackup
-
-map <F6> <Esc>:setlocal spell spelllang=en_gb<CR>
-map <F7> <Esc>:setlocal nospell<CR>
-map <F8> <Esc>z=
-map <F9> <Esc>]s
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_working_path_mode = 2
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*.pyc,*.class,*.beam,*.o,*/efabric/target/*,*/project/target/*,*/.eunit
 
 set wildmode=list:longest
+"set relativenumber
 
-" mutt stuff
+call pathogen#infect()
 
-map __a_start :imap <C-V><CR> <C-O>__a_cmd\|imap <C-V><ESC> <C-V><ESC>__a_end\|imap <C-V><C-V><C-V><C-I> <C-V><C-N>\|imap <C-V><C-N> <C-V><C-X><C-V><C-F><CR>
-noremap __a_end :iunmap <C-V><CR>\|iunmap <C-V><ESC>\|iunmap <C-V><C-V><C-V><C-I>\|iunmap <C-V><C-V><C-V><C-N><CR>dd`a:"Attach mode ended.<CR>
-noremap __a_cmd oAttach:<Space>
-noremap __a_scmd 1G/^$/<CR>:noh<CR>OAttach:<Space>
-map ,a ma__a_start__a_scmd
+set ttyfast
+
+let g:syntastic_python_checker = 'pyflakes'
