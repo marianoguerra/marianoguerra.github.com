@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Abandon hope all ye who enter here</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source" style="display: none">
+
+class: center, middle
+
+# Abandon hope all ye who enter here
+
+---
+
+class: center, middle
+
+![whoami](design-not-implement.png)
+
+---
+
+class: center, middle
+
+# The Game
+
+---
+
+class: middle
+
+
+# [Fallacies of Distributed Computing](https://en.wikipedia.org/wiki/Fallacies_of_Distributed_Computing)
+
+* The network is reliable.
+* Latency is zero.
+* Bandwidth is infinite.
+* The network is secure.
+* Topology doesn't change.
+* There is one administrator.
+* Transport cost is zero.
+* The network is homogeneous.
+
+---
+
+class: center, middle
+
+Partial failure
+
+---
+
+class: center, middle
+
+![Not sure if node down or GC'ing](node-down.jpg "Not sure if node down or GC'ing")
+
+---
+
+class: center, middle
+
+# Two Generals Problem
+
+Thought experiment meant to illustrate the pitfalls and design challenges 
+of attempting to coordinate an action by communicating over an unreliable link.
+
+---
+
+class: center, middle
+
+The Two Generals Problem was the first computer communication problem to be proved to be **unsolvable**.
+
+---
+
+class: center, middle
+
+# [FLP Imposibility Result](http://the-paper-trail.org/blog/a-brief-tour-of-flp-impossibility/)
+
+This kind of failure detection is impossible in an asynchronous setting, 
+where there are no bounds on the amount of time a processor might take to complete its work and then respond with a message. 
+
+---
+
+class: center, middle
+
+Therefore it’s not possible to say whether a processor has crashed or is simply taking a long time to respond.
+
+The FLP result shows that in an asynchronous setting, where only one processor might crash,
+
+There is no distributed algorithm that solves the consensus problem.
+
+---
+
+class: center, middle
+
+# CAP theorem
+
+![My other CAP is a theorem](cap.png "My other CAP is a theorem")
+
+---
+
+class: center, middle
+
+# CAP theorem
+
+![CAP Venn](cap-venn.png "CAP Venn")
+
+---
+
+class: center, middle
+
+# [Scalability! But at what COST?](https://blog.acolyer.org/2015/06/05/scalability-but-at-what-cost/)
+
+COST of distributed systems: the Configuration that Outperforms a Single Thread
+
+---
+
+class: center, middle
+
+# [Scalability! But at what COST?](https://blog.acolyer.org/2015/06/05/scalability-but-at-what-cost/)
+
+Many published systems have unbounded COST 
+
+(They never outperform the best single threaded application)
+
+Others are orders of magnitude slower even when using hundreds of cores.
+
+---
+
+class: center, middle
+
+![This is fine](this-is-fine.png "This is fine")
+
+---
+
+class: center, middle
+
+# [Google's Spanner](https://blog.acolyer.org/2015/01/08/spanner-googles-globally-distributed-database/)
+
+It uses a combination of GPS clocks and **atomic clocks** as references
+
+Able to give small confidence intervals (varying from about 1 to 7ms)
+
+---
+
+class: center, middle
+
+# [Google's Spanner](https://blog.acolyer.org/2015/01/08/spanner-googles-globally-distributed-database/)
+
+An atomic clock is **not that expensive**: 
+the cost of an Armageddon master is of the same order as that of a GPS master
+
+---
+
+class: center, middle
+
+# If you are not Google
+
+---
+
+class: center, middle
+
+[Amazon's dynamo paper](http://s3.amazonaws.com/AllThingsDistributed/sosp/amazon-dynamo-sosp2007.pdf)
+
+---
+
+class: center, middle
+
+![The Ring](the-ring.png "The Ring")
+
+---
+
+class: center, middle
+
+# Shameless Plug
+
+[The Little Riak Core Book](https://marianoguerra.github.io/little-riak-core-book/)
+
+---
+
+class: center, middle
+
+# Eventual Consistency
+
+Time, clocks and the ordering of events in a distributed system
+
+Virtual Time and Global States of Distributed Systems
+
+Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores
+
+---
+
+class: center, middle
+
+# Active Anti Entropy
+
+---
+
+class: center, middle
+
+# Consensus
+
+[Paxos](https://blog.acolyer.org/2015/03/03/the-part-time-parliament/)
+
+[ZAB](http://the-paper-trail.org/blog/a-brief-tour-of-flp-impossibility/)
+
+[Raft](https://raft.github.io/)
+
+[More](https://blog.acolyer.org/2015/03/01/cant-we-all-just-agree/)
+
+---
+
+class: center, middle
+
+# Remember Google Wave?
+
+![Remember Google Wave?](alf.png)
+
+---
+
+class: center, middle
+
+![CRDTs](crdts.jpg)
+
+---
+
+class: center, middle
+
+[Convergent and Commutative Replicated Data Types](https://blog.acolyer.org/2015/03/18/a-comprehensive-study-of-convergent-and-commutative-replicated-data-types/)
+
+---
+
+class: center, middle
+
+[A Conflict-Free Replicated JSON Datatype](https://arxiv.org/abs/1608.03960)
+
+---
+
+class: center, middle
+
+HyParView: a membership protocol for reliable gossip-based broadcast
+
+Epidemic Broadcast Trees
+
+---
+
+class: center, middle
+
+[Simple testing can prevent most critical failures](https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/)
+
+[Early detection of configuration errors to reduce failure damage](https://blog.acolyer.org/2016/11/29/early-detection-of-configuration-errors-to-reduce-failure-damage/)
+
+---
+
+class: center, middle
+
+[Quick Check](https://en.wikipedia.org/wiki/QuickCheck)
+
+[Python -> Hypothesis](https://hypothesis.readthedocs.io/en/latest/)
+
+[Concolic Testing](https://en.wikipedia.org/wiki/Concolic_testing)
+
+[TLA+](http://research.microsoft.com/en-us/um/people/lamport/tla/tla.html)
+
+---
+class: center, middle
+
+# Resources
+
+https://runway.systems/
+
+---
+class: center, middle
+
+# People
+
+[Peter Alvaro](https://people.ucsc.edu/~palvaro/)
+
+[Peter Bailis](http://www.bailis.org/)
+
+[Adrian Colyer](https://blog.acolyer.org)
+
+[Aphyr](https://aphyr.com/tags/jepsen)
+
+---
+
+class: center, middle
+
+# Misc
+
+Orleans
+
+Spark's Resilient Distributed Dataset
+
+Flink: Time handling, Watermarks
+
+SEDA
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
